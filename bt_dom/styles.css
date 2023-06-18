@@ -1,0 +1,33 @@
+.block_2 {
+  width: 1500px;
+  height: 500px;
+  top: 15px;
+  right: 15px;
+}
+table {
+  width: 1480px;
+}
+@media screen and (max-width: 1440px) {
+  .block_2 {
+    width: 1000px;
+  }
+  table {
+    width: 980px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .block_2 {
+    top: 500px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 792px) {
+  .block_2 {
+    top: 500px;
+    width: 760px;
+    height: 350px;
+  }
+  table {
+    width: 740px;
+  }
+}
