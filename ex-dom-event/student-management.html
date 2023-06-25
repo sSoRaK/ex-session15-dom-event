@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="left-side">
+      <h2>Student Info</h2>
+      <form action="#" class="form-student">
+        <label for="student-id" id="label-id">Student ID</label>
+        <input
+          type="text"
+          name="student-name"
+          id="student-id"
+          placeholder="Please type your student ID"
+        />
+        <div class="error error-row1"></div>
+        <label for="student-name" id="label-name">Student Name</label>
+        <input
+          type="text"
+          name="student-name"
+          id="student-name"
+          placeholder="Please type your student Name"
+        />
+        <div class="error error-row2"></div>
+        <label for="student-email" id="label-email">Email</label>
+        <input
+          type="email"
+          name="student-email"
+          id="student-email"
+          placeholder="Please type your email"
+        />
+        <div class="error error-row3"></div>
+        <label for="student-phone_number" id="label-phone_number"
+          >Phone Number</label
+        >
+        <input
+          type="number"
+          name="student-phone_number"
+          id="student-phone_number"
+          placeholder="Please type a phone number"
+        />
+        <div class="error error-row4"></div>
+        <label for="student-address" id="label-address">Address</label>
+        <input
+          type="text"
+          name="student-address"
+          id="student-address"
+          placeholder="Please type your address"
+        />
+        <div class="error error-row5"></div>
+        <span class="gender">Gender</span>
+        <div class="gender-wrapper">
+          <input type="radio" name="gender" id="male" checked />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Female</label>
+        </div>
+        <input type="submit" value="Submit" class="btn-submit" />
+      </form>
+    </div>
+    <div class="right-side">
+      <h2>Student List</h2>
+      <form action="#" class="searching-bar">
+        <span>Search Student:</span>
+        <input
+          type="text"
+          name="search-student_name"
+          id="search-student_name"
+        />
+        <button class="btn-search">search</button>
+      </form>
+      <table class="table-student">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Action</th>
+            <th>
+              <button class="btn-sort">sort a -> z</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="student-info"></tbody>
+      </table>
+    </div>
+    <script src="./app/app.js"></script>
+  </body>
+</html>

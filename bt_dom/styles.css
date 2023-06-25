@@ -1,4 +1,8 @@
+.divTable {
+  text-align: center;
+}
 .block_2 {
+  position: absolute;
   width: 1500px;
   height: 500px;
   top: 15px;
@@ -24,10 +28,18 @@ table {
 @media screen and (max-width: 792px) {
   .block_2 {
     top: 500px;
-    width: 760px;
+    left: 15px;
+    width: 740px;
     height: 350px;
   }
   table {
-    width: 740px;
+    width: 720px;
   }
+}
+.error {
+  visibility: hidden;
+}
+.display-error {
+  color: red;
+  visibility: hidden;
 }

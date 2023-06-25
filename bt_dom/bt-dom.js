@@ -14,13 +14,23 @@ h2Tittle1.style.textAlign = "center";
 divLeft.appendChild(h2Tittle1);
 let form = document.createElement("form");
 form.style.marginLeft = "10px";
-form.setAttribute("method", "_POST");
+form.setAttribute("action", "#");
+form.setAttribute("class", "form-student");
+// tạo label & input ID
+let labelId = document.createElement("label");
+form.appendChild(labelId);
+labelId.innerHTML = "ID";
+let id = document.createElement("input");
+form.appendChild(id);
+id.setAttribute("placeholder", "vui lòng nhập ID");
+id.style.marginLeft = "81px";
+id.setAttribute("class", "input-id");
 
 divLeft.appendChild(form);
 // tạo label và input Name
 let name = document.createElement("label");
 form.appendChild(name);
-name.innerHTML = "Họ và Tên";
+name.innerHTML = "<br><br>Họ và Tên";
 name.setAttribute("for", "name");
 let inputName = document.createElement("input");
 form.appendChild(inputName);
@@ -28,6 +38,7 @@ inputName.style.marginLeft = "31px";
 inputName.style.height = "25px";
 inputName.setAttribute("type", "text");
 inputName.setAttribute("id", "name");
+inputName.setAttribute("class", "input-name");
 inputName.setAttribute("placeholder", "vui lòng nhập tên");
 inputName.style.width = "170px";
 inputName.style.fontSize = "12px";
@@ -40,6 +51,7 @@ email.innerHTML = "<br><br>Email";
 let inputEmail = document.createElement("input");
 form.appendChild(inputEmail);
 inputEmail.setAttribute("id", "email");
+inputEmail.setAttribute("class", "input-email");
 inputEmail.setAttribute("type", "email");
 inputEmail.setAttribute("placeholder", "vui lòng nhập emai");
 inputEmail.style.marginLeft = "60px";
@@ -56,6 +68,7 @@ let inputPhone = document.createElement("input");
 form.appendChild(inputPhone);
 inputPhone.setAttribute("placeholder", "vui lòng nhập số điện thoại");
 inputPhone.setAttribute("id", "number");
+inputPhone.setAttribute("class", "input-number");
 inputPhone.setAttribute("type", "number");
 inputPhone.style.marginLeft = "14px";
 inputPhone.style.height = "25px";
@@ -65,11 +78,12 @@ inputPhone.style.fontSize = "12px";
 // tạo label và input Quê quán
 let homeTown = document.createElement("label");
 form.appendChild(homeTown);
-homeTown.setAttribute("for", "home-town");
+homeTown.setAttribute("for", "address");
 homeTown.innerHTML = "<br><br>Quê quán";
 let inputHomeTown = document.createElement("input");
 form.appendChild(inputHomeTown);
-inputHomeTown.setAttribute("id", "home-town");
+inputHomeTown.setAttribute("id", "address");
+inputHomeTown.setAttribute("class", "input-address");
 inputHomeTown.setAttribute("type", "text");
 inputHomeTown.setAttribute("placeholder", "vui lòng nhập địa chỉ quê quán");
 inputHomeTown.style.marginLeft = "36px";
@@ -81,13 +95,16 @@ inputHomeTown.style.fontSize = "12px";
 let gender = document.createElement("label");
 form.appendChild(gender);
 gender.innerHTML = "<br><br>Giới tính";
+gender.setAttribute("class", "input-gender");
 // male
 let inputGender1 = document.createElement("input");
 form.appendChild(inputGender1);
 inputGender1.style.marginLeft = "40px";
 inputGender1.setAttribute("type", "radio");
 inputGender1.setAttribute("id", "male");
+inputGender1.setAttribute("class", "input-gender");
 inputGender1.setAttribute("name", "gender");
+inputGender1.setAttribute("checked", "default");
 let male = document.createElement("label");
 form.appendChild(male);
 male.innerHTML = "Nam";
@@ -98,6 +115,7 @@ form.appendChild(inputGender2);
 inputGender2.style.marginLeft = "20px";
 inputGender2.setAttribute("type", "radio");
 inputGender2.setAttribute("id", "female");
+inputGender2.setAttribute("class", "input-gender");
 inputGender2.setAttribute("name", "gender");
 let female = document.createElement("label");
 form.appendChild(female);
@@ -112,6 +130,7 @@ let inputSubmit = document.createElement("input");
 divButton.appendChild(inputSubmit);
 inputSubmit.setAttribute("type", "submit");
 inputSubmit.setAttribute("value", "Lưu lại");
+inputSubmit.setAttribute("class", "submit-btn");
 divButton.style.textAlign = "center";
 inputSubmit.style.marginTop = "20px";
 inputSubmit.style.marginLeft = "20px";
@@ -123,11 +142,7 @@ let divRight = document.createElement("div");
 document.body.appendChild(divRight);
 divRight.setAttribute("class", "block_2");
 divRight.style.position = "absolute";
-// divRight.style.top = "15px";
-// divRight.style.right = "15px";
 divRight.style.border = "1px solid gray";
-// divRight.style.width = "1500px";
-// divRight.style.height = "500px";
 
 // tạo h2
 let h2Tittle2 = document.createElement("h2");
@@ -138,7 +153,7 @@ h2Tittle2.innerHTML = "Danh sách học viên";
 // tạo form
 let formSearch = document.createElement("form");
 divRight.appendChild(formSearch);
-formSearch.setAttribute("method", "_POST");
+formSearch.setAttribute("action", "#");
 formSearch.style.marginLeft = "10px";
 
 // tạo label tìm kiếm tên học viên
@@ -165,11 +180,11 @@ buttonSearch.style.height = "26px";
 
 // tạo table
 let table = document.createElement("table");
+table.setAttribute("class", "divTable");
 divRight.appendChild(table);
 table.style.border = "1px solid gray";
 table.style.marginLeft = "10px";
 table.style.marginTop = "15px";
-// table.style.width = "1480px";
 table.style.height = "110px";
 table.style.textAlign = "center";
 
@@ -230,6 +245,7 @@ tr1td8Button.style.height = "100%";
 // tbody td
 let tbody = document.createElement("tbody");
 table.appendChild(tbody);
+tbody.setAttribute("class", "tbody-table");
 // tr2
 let tr2 = document.createElement("tr");
 tbody.appendChild(tr2);
@@ -269,18 +285,17 @@ tr2.appendChild(tr2td7);
 tr2td7.style.border = "1px solid gray";
 
 // tạo 2 thẻ a "edit" & "delete"
-let tr2td7Edit = document.createElement("a");
+let tr2td7Edit = document.createElement("button");
 tr2td7.appendChild(tr2td7Edit);
 tr2td7Edit.innerHTML = "edit";
-tr2td7Edit.setAttribute("href", "#");
 tr2td7Edit.style.marginRight = "10px";
 tr2td7Edit.style.paddingRight = "10px";
-tr2td7Edit.style.borderRight = "1px solid gray";
+tr2td7Edit.setAttribute("onclick", "funcClick()");
 
-let tr2td7Delete = document.createElement("a");
+let tr2td7Delete = document.createElement("button");
 tr2td7.appendChild(tr2td7Delete);
 tr2td7Delete.innerHTML = "delete";
-tr2td7Delete.setAttribute("href", "#");
+tr2td7Delete.setAttribute("onclick", "funcClick()");
 
 // tr3
 let tr3 = document.createElement("tr");
@@ -321,15 +336,14 @@ tr3.appendChild(tr3td7);
 tr3td7.style.border = "1px solid gray";
 
 // tạo 2 thẻ a "edit" & "delete"
-let tr3td7Edit = document.createElement("a");
+let tr3td7Edit = document.createElement("button");
 tr3td7.appendChild(tr3td7Edit);
 tr3td7Edit.innerHTML = "edit";
-tr3td7Edit.setAttribute("href", "#");
 tr3td7Edit.style.marginRight = "10px";
 tr3td7Edit.style.paddingRight = "10px";
-tr3td7Edit.style.borderRight = "1px solid gray";
+tr3td7Edit.setAttribute("onclick", "funcClick()");
 
-let tr3td7Delete = document.createElement("a");
+let tr3td7Delete = document.createElement("button");
 tr3td7.appendChild(tr3td7Delete);
 tr3td7Delete.innerHTML = "delete";
-tr3td7Delete.setAttribute("href", "#");
+tr3td7Delete.setAttribute("onclick", "funcClick()");

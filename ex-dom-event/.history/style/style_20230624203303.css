@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 400px);
+  grid-template-rows: repeat(1, 550px);
+  gap: 85px;
+  margin: 25px;
+}
+/* left side student info */
+.left-side {
+  border: 1px solid gray;
+  grid-column: 1/2;
+}
+.left-side h2,
+.right-side h2 {
+  text-align: center;
+  margin: 15px 0;
+}
+.form-student {
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 125px);
+  grid-template-rows: repeat(13, 35px);
+  row-gap: 3px;
+}
+.error{
+  font-size: 13px;
+}
+.form-student input {
+  border: 0.5px solid gray;
+  border-radius: 5px;
+}
+#label-id {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  line-height: 35px;
+}
+#student-id {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  padding-left: 10px;
+}
+.error-row1{
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+#label-name {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  line-height: 35px;
+}
+#student-name {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  padding-left: 10px;
+}
+.error-row2{
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
+#label-email {
+  grid-column: 1/2;
+  grid-row: 5/6;
+  line-height: 35px;
+}
+#student-email {
+  grid-column: 2/4;
+  grid-row: 5/6;
+  padding-left: 10px;
+}
+.error-row3{
+  grid-column: 2/4;
+  grid-row: 6/7;
+}
+#label-phone_number {
+  grid-column: 1/2;
+  grid-row: 7/8;
+  line-height: 35px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#student-phone_number {
+  grid-column: 2/4;
+  grid-row: 7/8;
+  padding-left: 10px;
+}
+.error-row4{
+  grid-column: 2/4;
+  grid-row: 8/9;
+}
+#label-address {
+  grid-column: 1/2;
+  grid-row: 9/10;
+  line-height: 35px;
+}
+#student-address {
+  grid-column: 2/4;
+  grid-row: 9/10;
+  padding-left: 10px;
+}
+.error-row5{
+  grid-column: 2/4;
+  grid-row: 10/11;
+}
+.gender {
+  grid-column: 1/2;
+  grid-row: 11/12;
+}
+.gender-wrapper {
+  grid-column: 2/4;
+  grid-row: 11/12;
+}
+.gender-wrapper label[for="male"] {
+  margin-right: 15px;
+}
+.btn-submit {
+  grid-column: 2/3;
+  grid-row: 13/14;
+  padding: 10px 0;
+}
+
+/* right side student list */
+.right-side {
+  border: 1px solid gray;
+  grid-column: 2/5;
+}
+.right-side .searching-bar {
+  margin-left: 20px;
+  display: flex;
+  gap: 10px;
+}
+.table-student,
+th,
+tr,
+td {
+  border: 1px solid;
+  /* border-collapse: collapse; */
+  margin: 20px;
+  width: calc(100% - 42px);
+}
+.btn-sort {
+  padding: 10px;
+}
+
+#student-info tr td {
+  text-align: center;
+}
+.error {
+  visibility: hidden;
+}
+.error-row1 {
+  grid-row: 2;
+}
+.display-error {
+  color: red;
+  visibility: visible;
+}
+.btn-edit,
+.btn-delete,
+.btn-submit,
+.btn-sort,
+.btn-search {
+  cursor: pointer;
+}
